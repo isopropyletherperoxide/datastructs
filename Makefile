@@ -1,5 +1,5 @@
 all:
-	cc main.c -Wall -lm -o main
+	cc main.c linked_list.c -Wall -lm -o main
 clean:
 	 rm main 
 install:

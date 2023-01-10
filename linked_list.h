@@ -8,3 +8,5 @@ struct node *init_list(int contents);
 int pretty_print(struct node *starting_node);
 
 int add_node(int contents, struct node *prev);
+
+int delete_node(struct node *list);

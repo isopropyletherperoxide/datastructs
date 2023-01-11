@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #include "linked_list.h"
 #include "main.h"
@@ -32,7 +33,8 @@ int parse_args(int argc, char *argv[], struct node *list) {
       }
       printf("Appending Node \n");
       int new_node;
-      sscanf(argv[i], "a%d", &new_node);
+      // sscanf(argv[i], "a%d", &new_node); // old bad implementation
+      new_node = atoi(argv[i]+1);
       add_node(new_node, list);
       break;
     case 'd':

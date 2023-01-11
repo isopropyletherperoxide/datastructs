@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdint.h>
 #include <stdlib.h>
 
 #include "linked_list.h"
@@ -18,7 +17,7 @@ struct node *list_init_from_arg(char *init) {
     printf("List must start with valid initializer!");
     return NULL;
   }
-  int initializer = init[1] - '0';
+  int initializer = atoi(init + 1);
   printf("List initialized with %i\n", initializer);
   return init_list(initializer);
 }

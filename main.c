@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
+
 #include "linked_list.h"
 #include "main.h"
 

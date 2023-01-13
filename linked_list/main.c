@@ -13,8 +13,9 @@ int main(int argc, char *argv[]) {
 
 struct node *list_init_from_arg(char *init) {
   if (init[0] != 'i' || strlen(init) < 2) {
-    printf("List must start with valid initializer! \n");
+    printf("\e[1;31mList must start with valid initializer!\e[0m\n");
     help();
+    exit(1);
     return NULL;
   }
   int initializer = atoi(init + 1);
@@ -27,7 +28,7 @@ int parse_args(int argc, char *argv[], struct node *list) {
     switch (argv[i][0]) {
     case 'a':
       if (strlen(argv[i]) < 2) {
-        printf("Invalid append command, appending failed! \n");
+        printf("\e[1;31mInvalid append command, appending failed!\e[0m\n");
         break;
       }
       printf("Appending Node \n");
@@ -49,7 +50,7 @@ int parse_args(int argc, char *argv[], struct node *list) {
       break;
 
     default:
-      printf("%s, Command not recognised!\n", argv[i]);
+      printf("\e[1;31m%s, Command not recognised!\e[0m\n", argv[i]);
     }
   }
   return 0;

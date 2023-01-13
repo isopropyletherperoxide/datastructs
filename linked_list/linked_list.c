@@ -15,7 +15,7 @@ int pretty_print(struct node *starting_node) {
   struct node *cur_node = starting_node;
   while (cur_node != NULL) {
     if (cur_node->next == NULL) {
-      printf("%i -> NULL\n", cur_node->contents);
+      printf("%i -> \e[1;32mNULL\e[0m\n", cur_node->contents);
       break;
     }
     printf("%i -> ", cur_node->contents);
